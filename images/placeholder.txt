@@ -1,0 +1,17 @@
+This directory is for your local images.
+
+TO ADD YOUR OWN IMAGES:
+1. Put your image files here (hero-bg.jpg, profile.jpg, project-1.jpg, etc.)
+2. Update data/config.js to point to the new filenames:
+   - images.hero: "images/hero-bg.jpg"
+   - images.profile: "images/profile.jpg"
+   - projects[].img: "images/project-1.jpg", etc.
+
+Supported formats: .jpg, .png, .webp, .avif
+
+For best results:
+- Hero image: 1200x1400px
+- Profile image: 800x800px  
+- Project images: 800x600px
+
+You can also use absolute URLs if you prefer (like unsplash.com or your own CDN).
