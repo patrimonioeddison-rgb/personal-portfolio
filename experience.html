@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Rivera • Experience</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="data/config.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+        .page { animation: fadeInPage 0.35s ease forwards; }
+        @keyframes fadeInPage { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link { position: relative; transition: color 0.2s ease; }
+        .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background-color: #3b82f6; transition: width 0.3s ease; }
+        .nav-link.active:after, .nav-link:hover:after { width: 100%; }
+        .section-header { font-size: 2.25rem; line-height: 1.1; font-weight: 700; letter-spacing: -.025em; }
+        .php-badge { background: linear-gradient(90deg, #3b82f6, #1e40af); color: white; font-size: 0.65rem; padding: 1px 8px; border-radius: 20px; font-weight: 600; }
+        .timeline-item { position: relative; }
+        .timeline-item:before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #3b82f6, transparent); }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-screen-2xl mx-auto">
+            <div class="px-8 py-5 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-white font-bold text-3xl tracking-tighter">MR</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-2xl tracking-tighter">Marcus Rivera</span>
+                        <div class="flex items-center gap-x-1.5">
+                            <span class="text-xs text-zinc-400">Full Stack Developer</span>
+                            <span class="php-badge text-[10px] px-1.5 py-px">PHP 8</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium">Home</a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-sm font-medium">About</a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-sm font-medium">Projects</a>
+                    <a href="experience.html" class="nav-link px-4 py-2 text-sm font-medium active text-blue-400">Experience</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium">Contact</a>
+                    <a href="php-architecture.html" class="nav-link px-4 py-2 text-sm font-medium text-emerald-300">PHP OOP</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors rounded-2xl border border-zinc-800">
+                        <i class="fa-solid fa-moon text-lg"></i>
+                    </button>
+                    <button onclick="downloadResume()" class="hidden md:flex items-center gap-x-2 px-5 py-2.5 text-sm font-semibold bg-white text-zinc-900 hover:bg-amber-100 transition-colors rounded-3xl">
+                        <i class="fa-solid fa-download text-xs"></i><span>Resume</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden w-9 h-9 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors rounded-2xl border border-zinc-800">
+                        <i class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-screen-2xl mx-auto">
+        <div class="page px-8 pt-9 pb-14 max-w-4xl">
+            <div class="mb-8">
+                <span class="px-3 py-1 text-xs font-semibold tracking-wider bg-zinc-900 border border-zinc-700 text-blue-300 rounded-2xl">CAREER</span>
+                <h2 class="section-header mt-1.5">Professional Journey</h2>
+            </div>
+            
+            <div class="space-y-6" id="experience-timeline">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div class="mt-8 bg-zinc-900 border border-zinc-800 rounded-3xl p-5">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <div class="font-semibold">Education</div>
+                        <div class="text-sm text-zinc-400">B.S. Computer Science • Stanford University</div>
+                    </div>
+                    <div class="text-xs px-3 py-1.5 bg-zinc-800 rounded-2xl text-center">
+                        <div class="font-semibold">2016</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-6 px-8">
+        <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs gap-y-2 text-zinc-400">
+            <div>© 2026 Marcus Rivera. All rights reserved. Built with <span class="font-medium text-blue-300">PHP 8 + OOP</span> (static version for Vercel).</div>
+            <div class="flex gap-x-4">
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+                <a href="#" class="hover:text-white transition-colors">Legal</a>
+                <a href="php-architecture.html" class="hover:text-white transition-colors">PHP Architecture</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            const config = window.PORTFOLIO_CONFIG || { experience: [] };
+            const container = document.getElementById('experience-timeline');
+            
+            if (container) {
+                container.innerHTML = '';
+                config.experience.forEach((exp, index) => {
+                    const item = document.createElement('div');
+                    item.className = 'timeline-item flex gap-5';
+                    item.innerHTML = `
+                        <div class="flex-shrink-0 w-8 pt-1">
+                            <div class="w-8 h-8 bg-zinc-800 border border-zinc-700 flex items-center justify-center rounded-2xl text-xs font-extrabold text-blue-300">${index + 1}</div>
+                        </div>
+                        <div class="flex-1 pb-4">
+                            <div class="flex items-baseline justify-between">
+                                <div>
+                                    <h4 class="font-extrabold text-xl tracking-tight">${exp.role}</h4>
+                                    <div class="font-medium">${exp.company} <span class="text-xs text-zinc-400 font-normal">— ${exp.location}</span></div>
+                                </div>
+                                <div class="text-xs font-semibold px-3 py-1 bg-zinc-900 border border-zinc-700 text-zinc-300 rounded-3xl whitespace-nowrap">${exp.period}</div>
+                            </div>
+                            <div class="mt-3 text-sm text-zinc-300">${exp.description}</div>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                ${exp.highlights.map(h => `<span class="text-xs px-3 py-1 bg-zinc-800 border border-zinc-700 rounded-[2.1rem]">${h}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(item);
+                });
+            }
+
+            // Theme toggle
+            $('#theme-toggle').on('click', function() {
+                const $icon = $(this).find('i');
+                if ($icon.hasClass('fa-moon')) {
+                    $('body').addClass('bg-white text-zinc-800').removeClass('bg-zinc-950 text-zinc-200');
+                    $icon.removeClass('fa-moon').addClass('fa-sun');
+                } else {
+                    $('body').removeClass('bg-white text-zinc-800').addClass('bg-zinc-950 text-zinc-200');
+                    $icon.removeClass('fa-sun').addClass('fa-moon');
+                }
+            });
+
+            $('#mobile-menu-btn').on('click', function() {
+                $('#mobile-menu').slideToggle(180);
+                $(this).find('i').toggleClass('fa-bars fa-times');
+            });
+        });
+    </script>
+</body>
+</html>

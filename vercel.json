@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "data/**", "use": "@vercel/static" },
+    { "src": "images/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/about", "dest": "/about.html" },
+    { "src": "/projects", "dest": "/projects.html" },
+    { "src": "/experience", "dest": "/experience.html" },
+    { "src": "/contact", "dest": "/contact.html" },
+    { "src": "/php-architecture", "dest": "/php-architecture.html" },
+    { "src": "/php", "dest": "/php-architecture.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
+      ]
+    }
+  ]
+}
