@@ -1,0 +1,21 @@
+/* Optional external stylesheet - currently styles are in header.php for simplicity */
+/* You can move styles here and link from header.php if preferred */
+
+.portfolio-nav {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-btn {
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.3);
+}
+
+.filter-btn.active {
+    background-color: #1e40af;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
